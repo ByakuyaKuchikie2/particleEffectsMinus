@@ -1837,14 +1837,14 @@ if SERVER then
 				end
 			end
 			if badparticle != nil then
-				MsgN(ent, " (", ent:GetParticleName(), ", ", PEPlus_GetDataPCFNiceName(pcf), ") has nil target entity ", badparticle, "; most likely a bad dupe, removing")
+				--MsgN(ent, " (", ent:GetParticleName(), ", ", PEPlus_GetDataPCFNiceName(pcf), ") has nil target entity ", badparticle, "; most likely a bad dupe, removing")
 				for k, v in pairs (ent.ParticleInfo) do
 					//don't leave behind any orphaned grip points (i.e. loaded a dupe; one cpoint was attached to a non-dupable entity, another was attached to a grip)
 					if IsValid(v.ent) and v.ent.PEPlus_Grip then
-						v.ent:Remove()
+						--v.ent:Remove()
 					end
 				end
-				ent:Remove()
+				--ent:Remove()
 				return
 			end
 			//MsgN("go")

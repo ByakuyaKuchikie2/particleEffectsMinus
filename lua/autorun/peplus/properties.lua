@@ -7,6 +7,26 @@ if CLIENT then
 	function OpenPEPlusEditor(ent)
 
 		if IsValid(ent.PEPlusWindow) then return end
+		if Warden then
+			local ent_owner = Warden.GetOwner(ent)
+			local tool_gun_perms = false
+			if LocalPlayer() == ent_owner then
+				tool_gun_perms = true 
+			else
+				tool_gun_perms = Warden.CheckPermission(LocalPlayer(), ent_owner, Warden.PERMISSION_TOOL)
+			end
+
+			if not tool_gun_perms then
+				print(tool_gun_perms)
+				return 
+			end
+			--[[
+			if  != LocalPlayer() then
+				print('aaaa')
+				return
+			end
+			--]]
+		end 
 
 		local width = 367 //width of 367 nicely fits color picker
 		local height = 400
