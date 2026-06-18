@@ -10,7 +10,7 @@ ENT.PEPlus_Ent			= true //lets us detect if an ent is an ent_peplus without havi
 
 if CLIENT then
 	language.Add("Undone_PEPlus", "Undone Particle Effect")
-    	language.Add("Cleanup_peplus", "Particle Effects")
+    language.Add("Cleanup_peplus", "Particle Effects")
    	language.Add("Cleaned_peplus", "Cleaned up all Particle Effects")
 	language.Add("SBoxLimit_peplus", "You've hit the Particle Effect limit!")
    	language.Add("max_peplus", "Max Particle Effects:")
